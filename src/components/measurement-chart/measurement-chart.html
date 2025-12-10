@@ -1,0 +1,37 @@
+<div class="chart-container">
+  <div class="controls">
+    <mat-form-field appearance="fill" style="width: 200px">
+      <mat-label>Параметр</mat-label>
+      <mat-select [(value)]="selectedType" (selectionChange)="loadData()">
+        <mat-option value="T">Температура (T)</mat-option>
+        <mat-option value="phi">Влажность (φ)</mat-option>
+        <mat-option value="pH">Кислотность (pH)</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" style="width: 200px">
+      <mat-label>Период</mat-label>
+      <mat-select [(value)]="selectedTime" (selectionChange)="loadData()">
+        <mat-option value="hour">Последние 24 часа</mat-option>
+        <mat-option value="day">Последние 7 дней</mat-option>
+        <mat-option value="week">Последние 30 дней</mat-option>
+        <mat-option value="month">Последние 6 месяцев</mat-option>
+        <mat-option value="year">Последний год</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="refreshData()">Обновить данные</button>
+  </div>
+
+  <div class="chart-wrapper">
+    <canvas
+      baseChart
+      [data]="chartData"
+      [options]="chartOptions"
+      [type]="'line'"
+      (chartClick)="onChartClick($event)"
+    ></canvas>
+  </div>
+
+  <div class="last-updated">Последнее обновление: {{ lastUpdated | date : 'HH:mm:ss' }}</div>
+</div>

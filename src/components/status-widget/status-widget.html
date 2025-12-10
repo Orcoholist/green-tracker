@@ -1,0 +1,22 @@
+  <mat-card class="status-widget">
+      <mat-card-header>
+        <mat-card-title>Состояние теплиц</mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="content">
+        <div class="status-item">
+          <span class="dot green"></span>
+          <span>Норма:</span>
+          <strong>{{ counts.ok }}</strong>
+        </div>
+        <div class="status-item">
+          <span class="dot yellow"></span>
+          <span>Предупреждение:</span>
+          <strong>{{ counts.warning }}</strong>
+        </div>
+        <div class="status-item">
+          <span class="dot red"></span>
+          <span>Авария:</span>
+          <strong>{{ counts.alarm }}</strong>
+        </div>
+      </mat-card-content>
+    </mat-card>

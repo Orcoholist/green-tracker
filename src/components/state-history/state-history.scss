@@ -1,0 +1,43 @@
+.controls {
+  margin-bottom: 16px;
+}
+.badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.ok {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+.warning {
+  background: #fff8e1;
+  color: #f57f17;
+}
+.alarm {
+  background: #ffebee;
+  color: #c62828;
+}
+.editable-comment {
+  cursor: pointer;
+  border-bottom: 1px dashed #666;
+}
+.comment-input {
+  width: 100%;
+  padding: 4px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.spinner {
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

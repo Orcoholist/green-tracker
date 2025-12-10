@@ -1,0 +1,11 @@
+<h2 mat-dialog-title>Редактировать комментарий</h2>
+<mat-dialog-content>
+  <mat-form-field appearance="fill" style="width: 100%">
+    <mat-label>Комментарий</mat-label>
+    <input matInput [(ngModel)]="comment" placeholder="Введите комментарий" />
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Отмена</button>
+  <button mat-button [mat-dialog-close]="comment" cdkFocusInitial>Сохранить</button>
+</mat-dialog-actions>
