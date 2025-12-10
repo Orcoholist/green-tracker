@@ -3,5 +3,5 @@ import { Environment } from './environment.interface';
 export const environment: Environment = {
   production: true,
   mock: false,
-  apiUrl: '/api',
+  // apiUrl: '/api',
 };
